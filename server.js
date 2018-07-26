@@ -98,7 +98,7 @@ function render (req, res) {
   }
 
   const context = {
-    title: 'Vue HN 2.0', // default title
+    title: 'Vue-ssr-dome', // default title
     url: req.url
   }
   renderer.renderToString(context, (err, html) => {
