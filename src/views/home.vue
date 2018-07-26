@@ -1,27 +1,19 @@
 <template>
-    <ul class="abc">
-      <li v-for="i in category">{{i.name}}</li>
-    </ul>
+    <div>
+      {{name}}
+    </div>
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
 
 export default {
-   asyncData ({ store }) {
-    return store.dispatch('setCategory')
+  data(){
+    return{
+      name:'test'
+    }
   },
-  computed: {
-    ...mapGetters({
-      category: 'getCategory'
-    })
-  },
-  methods: {
-    ...mapActions([
-      'setCategory',
-    ])
-  },
-
+  beforeMount(){
+  }
 }
 </script>
 

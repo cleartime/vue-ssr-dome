@@ -16,6 +16,7 @@ module.exports = {
     filename: '[name].[chunkhash].js'
   },
   resolve: {
+    extensions: ['.js', '.vue', '.json', '.css', '.styl'],
     alias: {
       'public': path.resolve(__dirname, '../public')
     }
