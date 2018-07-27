@@ -5,6 +5,7 @@ Vue.use(Router)
 
 // route-level code splitting
 const Home = () => import('../views/home.vue')
+const List = () => import('../views/list.vue')
 
 export function createRouter () {
   return new Router({
@@ -12,6 +13,7 @@ export function createRouter () {
     fallback: false,
     scrollBehavior: () => ({ y: 0 }),
     routes: [
+      { path: '/list', component: List },
       { path: '/', component: Home },
     ]
   })

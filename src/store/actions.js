@@ -11,5 +11,3 @@ export const setCategory = ({ commit, state }) => {
     console.log(error)
   })
 }
-
-export const decrement = ({ commit }) => commit('DECREMENT')

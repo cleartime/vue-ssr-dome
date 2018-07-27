@@ -5,11 +5,10 @@
 </template>
 
 <script>
-
 export default {
   data(){
     return{
-      name:'test'
+      name: 'test'
     }
   },
   beforeMount(){

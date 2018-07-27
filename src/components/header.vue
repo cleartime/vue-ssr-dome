@@ -1,15 +1,17 @@
 <template>
-    <ul>
-      <li v-for="i in category" @click="link(i)">{{i.name}}</li>
-    </ul>
+    <div>
+       <ul>
+        <li v-for="(i, index) in category" @click="link(i)" :key="index">{{i.name}}</li>
+      </ul>
+    </div>
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
-    name: 'Gmenu',
-   asyncData ({ store }) {
+  name: 'Gmenu',
+  asyncData ({ store, route}) {
     return store.dispatch('setCategory')
   },
   computed: {
@@ -25,7 +27,6 @@ export default {
         this.$router.push(obj.name)
     }
   },
-
 }
 </script>
 
