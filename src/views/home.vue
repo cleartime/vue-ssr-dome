@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div @click="link">
       {{name}}
     </div>
 </template>
@@ -8,11 +8,14 @@
 export default {
   data(){
     return{
-      name: 'test'
+      name: '点我'
     }
   },
-  beforeMount(){
-  }
+  methods: {
+    link(){
+      this.$router.push('list')
+    }
+  },
 }
 </script>
 
